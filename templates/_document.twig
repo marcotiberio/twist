@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="html {{ body_class }} page-{{ post.slug }}" id="theTop" lang="{{ site.language }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} {{ __('Feed', 'flynt') }}" href="{{ site.rss2 | e('esc_url') }}">
+    {{ function('wp_head') }}
+  </head>
+  <body>
+    <a href="#mainContent" class="skipLink">
+      {{ __("Skip to main content", "flynt") }}
+    </a>
+    {% block layout %}
+      <div class="pageWrapper">
+        <header class="mainHeader" id="mainHeader">
+          {% block header %}
+            {{ renderComponent('NavigationMain') }}
+            {{ renderComponent('NavigationBurger') }}
+          {% endblock %}
+        </header>
+        <main id="mainContent" class="mainContent" aria-label="{{ __('Content', 'flynt') }}">
+          {% if function('post_password_required') %}
+            {{ function('get_the_password_form') }}
+          {% else %}
+            {% block content %}
+              No <code>{{ '{% block content %}' }}</code> defined for this template.
+            {% endblock %}
+          {% endif %}
+        </main>
+        <section class="accessibility">
+          <div class="accessibility-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="628.937" height="627.498" viewBox="0 0 628.937 627.498">
+              <g id="Group_2" data-name="Group 2" transform="translate(1.561 8.061)">
+                <g id="Group_1" data-name="Group 1">
+                  <line id="Line_1" data-name="Line 1" x2="870.979" y2="6.364" transform="translate(2 611.375) rotate(-45)" fill="none" stroke="#000" stroke-width="10"/>
+                  <line id="Line_2" data-name="Line 2" x2="400" transform="translate(222.375)" fill="none" stroke="#000" stroke-linecap="square" stroke-width="10"/>
+                  <line id="Line_3" data-name="Line 3" x2="400" transform="translate(622.375) rotate(90)" fill="none" stroke="#000" stroke-linecap="square" stroke-width="10"/>
+                </g>
+              </g>
+            </svg>
+            <span>Accessibility tools</span>
+          </div>
+          <div class="accessibility-content">
+            <div class="accessibility-content--inner fontSizebigger">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.00658 0L6.07056 2.75502L6.2816 3.2516L8.75829 0.604709C8.83563 0.525381 8.87337 0.542637 8.86977 0.660699L8.69622 6.8158L9.31694 6.81927L9.13581 0.653126C9.13656 0.549837 9.16809 0.517684 9.25487 0.612903L11.7316 3.2516L11.9426 2.75502L9.00658 0Z" fill="black"/>
+                <path d="M0 8.8885V9.13679L8.34551 9.32201C8.60323 9.32226 8.69014 9.42157 8.69051 9.6793L8.88256 18H9.13085L9.30838 9.66465C9.31086 9.42157 9.38535 9.32226 9.66765 9.32164L18.001 9.13679V8.8885L9.0067 8.69446L0 8.8885Z" fill="black"/>
+              </svg>
+              <span>Increase text</span>
+            </div>
+            <div class="accessibility-content--inner fontSizesmaller">
+              <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 8.88587V9.13423L8.34793 9.31951C8.60573 9.31975 8.69265 9.4191 8.69302 9.6769L8.88513 18H9.13349L9.31107 9.66225C9.31356 9.4191 9.38806 9.31975 9.67045 9.31913L18.0062 9.13423V8.88587L9.00931 8.69177L0 8.88587Z" fill="black"/>
+                <path d="M9.0089 7.65984L11.6667 4.7437V4.38358L9.41286 6.47305C9.35698 6.51949 9.31973 6.50707 9.31563 6.41394L9.13346 0H8.88509L8.70292 6.41394C8.69882 6.50707 8.66157 6.51949 8.60569 6.47305L6.35181 4.38358V4.7437L9.0089 7.65984Z" fill="black"/>
+              </svg>
+              <span>Decrease text</span>
+            </div>
+            <div class="accessibility-content--inner blackWhite">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.69593 6.81117L8.88227 0H9.13073L9.29173 5.8875C9.3049 6.25881 9.78939 6.35822 9.93648 6.01785L12.3383 0.638233L12.5679 0.733297L10.4625 6.23855C10.3236 6.58177 10.7335 6.86759 11.006 6.60551L15.2854 2.55256L15.4608 2.72852L11.4079 7.01049C11.1558 7.27767 11.4291 7.68775 11.7699 7.55528L17.2747 5.44871L17.3695 5.67848L11.9869 8.08304C11.6527 8.23452 11.7397 8.70673 12.1117 8.71804L17.9999 8.88083V9.12613L12.1125 9.28345C11.7396 9.30333 11.6402 9.76312 11.9897 9.91758L17.3749 12.3236L17.2798 12.5533L11.7741 10.4468C11.4291 10.31 11.1682 10.6952 11.4127 10.9939L15.463 15.2735L15.2873 15.4492L11.0114 11.4001C10.746 11.1426 10.3484 11.4036 10.4659 11.7698L12.5679 17.2667L12.3383 17.3618L9.94021 11.9911C9.78927 11.652 9.30477 11.7514 9.29136 12.1227L9.1306 18H8.88215L8.6958 11.1854V6.81117H8.69593Z" fill="black"/>
+                <path d="M6.98998 11.4106L2.72766 15.4474L2.55225 15.2714L6.58772 11.0078L6.98998 11.4106Z" fill="black"/>
+                <path d="M5.87581 9.28268L0 9.12934V8.8808L5.87656 8.71814L5.87581 9.28268Z" fill="black"/>
+                <path d="M6.59161 6.99734L2.5498 2.72668L2.72547 2.55096L6.99573 6.5946L6.59161 6.99734Z" fill="black"/>
+              </svg>
+              <span>High contrast</span>
+            </div>
+          </div>
+        </section>
+        <footer class="mainFooter">
+          {% block footer %}
+            {{ renderComponent('BlockNewsletter') }}
+            {{ renderComponent('NavigationFooterColumns') }}
+          {% endblock %}
+        </footer>
+      </div>
+    {% endblock %}
+    <div class="wpFooter">
+      {{ function('wp_footer') }}
+    </div>
+  </body>
+</html>

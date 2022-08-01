@@ -1,0 +1,21 @@
+[is='flynt-block-wysiwyg'] {
+  .content {
+    @include reset-content-margins;
+    text-align: inherit;
+
+    &--textLeft {
+      text-align: left;
+    }
+
+    &--textCenter {
+      text-align: center;
+    }
+
+    .pillCircle {
+      border: 1px solid $black;
+      border-radius: 1rem;
+      display: inline-block;
+      padding: 5px 10px;
+    }
+  }
+}

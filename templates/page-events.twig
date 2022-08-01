@@ -1,0 +1,34 @@
+{% extends 'templates/_document.twig' %}
+
+{% block content %}
+  {% for component in post.meta('pageComponents') %}
+    {{ renderComponent(component) }}
+  {% endfor %}
+  
+  <h1 class="section-title">Upcoming Events</h1>
+  <ul class="list-events list-events--future">
+    {% for post in futureEvents %}
+    <li class="list-events-item">
+      <a href="{{ post.link }}" class="list-events-item-link">
+        <div>{{ post.datePost|date("d.m.Y")|escape('wp_kses_post') }}</div>
+        <p class="title" >{{ post.title }}</p>
+        <p class="venue" >{{ post.venue }}</p>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <h1 class="section-title">Past Events</h1>
+  <ul class="list-events list-events--past">
+    {% for post in pastEvents %}
+    <li class="list-events-item">
+      <a href="{{ post.link }}" class="list-events-item-link">
+        <div>{{ post.datePost|date("d.m.Y")|escape('wp_kses_post') }}</div>
+        <p class="title" href="{{ post.link }}">{{ post.title }}</p>
+        <p class="venue" >{{ post.venue }}</p>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  
+{% endblock %}

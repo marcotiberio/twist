@@ -1,0 +1,64 @@
+[is='flynt-block-image-text'] {
+  height: auto;
+  
+  .box-inner {
+    @include reset-content-margins('top');
+    height: 100%;
+  }
+
+  @media (min-width: $breakpoint-tablet-horizontal) {
+    .box {
+      align-items: flex-start;
+      display: flex;
+      margin: 0;
+
+      &-inner {
+        @include reset-content-margins('both');
+        width: 50%;
+      }
+
+      &--image {
+        &Right {
+          flex-direction: row;
+
+          .box-inner--content {
+            padding-right: $spacing-small/2;
+          }
+
+          .box-inner--image {
+            padding-left: $spacing-small/2;
+          }
+        }
+  
+        &Left {
+          flex-direction: row-reverse;
+
+          .box-inner--content {
+            padding-left: $spacing-small/2;
+          }
+
+          .box-inner--image {
+            padding-right: $spacing-small/2;
+          }
+        }
+      }
+    }
+
+    .figure-caption {
+      position: absolute;
+    }
+  }
+
+  figure {
+    margin: 0;
+
+    img {
+      height: 70vh;
+      object-fit: cover;
+  
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        height: auto;
+      }
+    }
+  }
+}

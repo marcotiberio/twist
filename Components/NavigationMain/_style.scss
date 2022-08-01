@@ -1,0 +1,101 @@
+[is='flynt-navigation-main'] {
+  // $navigation-height: 100px;
+
+  display: none;
+
+  @media (min-width: $breakpoint-tablet-horizontal) {
+    background-color: $white;
+    display: block;
+    left: 0;
+    padding: $spacing-large !important;
+    position: relative;
+    top: 0;
+    width: 50vw;
+    z-index: 1000;
+  }
+
+  .wrapper {
+    background-color: $color-background;
+    height: auto;
+    padding-bottom: 0;
+    padding-left: $spacing-small;
+    padding-right: $spacing-small;
+    padding-top: $spacing-small;
+  }
+
+  .container {
+    align-items: flex-start;
+    border-bottom: 1px solid $black;
+    column-gap: $spacing-small;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+    justify-content: space-between;
+    padding-bottom: $spacing-small;
+
+    .right {
+      column-gap: $spacing-small;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+    }
+  }
+
+  .logo {
+    display: block;
+    height: 100%;
+    width: fit-content;
+
+    &-image {
+      height: auto;
+      max-width: 19vw;
+      width: auto;
+    }
+  }
+
+  .menu {
+    @include reset-list;
+    align-items: flex-start;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 0;
+    width: 50%;
+
+    &-item--current {
+      .menu-link {
+        color: $color-text;
+        text-decoration: underline;
+      }
+    }
+
+    &-link {
+      color: $color-text;
+      display: inline-block;
+      padding: 0;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.2s ease-out;
+
+      &:hover,
+      &:focus {
+        color: $color-text;
+        text-decoration: underline;
+      }
+    }
+
+    .open-submenu {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &-submenu {
+      display: none;
+      padding-left: $spacing-small;
+    }
+  }
+
+  
+
+  @import 'Partials/search';
+}

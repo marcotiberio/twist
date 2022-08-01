@@ -1,0 +1,65 @@
+.menu {
+  @include reset-list;
+  backface-visibility: hidden;
+  background-color: $color-background;
+  height: calc(100% - #{$navigation-height});
+  left: 0;
+  margin: 0;
+  overflow-y: auto;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  position: fixed;
+  top: $navigation-height;
+  transform: translateY(-100%);
+  transition: transform 0.45s cubic-bezier(0.19, 1, 0.22, 1), visibility 0.45s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 98;
+
+  .admin-bar & {
+    top: $navigation-height + 46px;
+
+    @media (min-width: 783px) {
+      top: $navigation-height + 32px;
+    }
+  }
+
+  &-item--current {
+    .menu-link {
+      color: $color-text;
+      text-decoration: underline;
+    }
+  }
+
+  &-link {
+    color: $color-text;
+    display: block;
+    font-size: 2.35rem;
+    font-weight: 400;
+    margin: 0;
+    padding: $spacing-small $spacing-large;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s ease-out;
+
+    &:focus {
+      color: $color-text;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+      padding-left: $spacing-large;
+      padding-right: $spacing-large;
+    }
+  }
+
+  &-submenu {
+    @include reset-list;
+    display: none;
+  }
+}
+
+&.flyntComponent-menuIsOpen .menu {
+  transform: translateY(0);
+  visibility: visible;
+}

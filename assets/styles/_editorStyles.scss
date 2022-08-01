@@ -1,0 +1,36 @@
+.mce-content-body {
+  background-color: #fff;
+}
+
+#tinymce {
+  h2,
+  .h2 {
+    font-size: 15px;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  h4,
+  .h4 {
+    font-size: 15px;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  h5,
+  .h5 {
+    font-size: 15px;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  p,
+  .p
+  .paragraph,
+  table,
+  span {
+    margin: 0;
+    margin-block-end: 1.2rem;
+    margin-block-start: 0;
+  }
+}

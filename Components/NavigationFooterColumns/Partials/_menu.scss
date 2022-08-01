@@ -1,0 +1,63 @@
+.list {
+  @include reset-list;
+  column-gap: $spacing-small;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+
+  @media (min-width: $breakpoint-tablet) {
+    padding-right: 0;
+  }
+
+  @media (max-width: $breakpoint-mobile-horizontal) {
+    display: block;
+  }
+
+  &-item {
+    @include reset-content-margins;
+    width: 100%;
+
+    @media (min-width: $breakpoint-tablet-horizontal) {
+      width: 50%;
+    }
+
+    &:last-child {
+      grid-column-end: 3;
+      grid-column-start: 2;
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        grid-column-end: 1;
+        grid-column-start: 2;
+      }
+    }
+  }
+
+  &-link {
+    color: $color-text;
+  }
+
+  &-titleLink,
+  &-link {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $color-text;
+      text-decoration: underline;
+    }
+  }
+
+  .childList {
+    @include reset-list;
+
+    &-item {
+      line-height: 1.625;
+      margin: 0;
+      padding: 0;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

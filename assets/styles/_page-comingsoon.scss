@@ -1,0 +1,31 @@
+/* Custom styling for homepage */
+
+.page-coming-soon {
+  .mainHeader .wrapper,
+  .mainHeader .container,
+  .mainFooter {
+    display: none;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  .flyntComponent {
+    margin-bottom: 0;
+    padding: 0;
+
+    &-listSocial {
+      bottom: 0;
+      padding: 10px;
+      position: fixed;
+      right: 0;
+      width: 100vw;
+      z-index: 1004;
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        padding: 10px 15px;
+      }
+    }
+  }
+}

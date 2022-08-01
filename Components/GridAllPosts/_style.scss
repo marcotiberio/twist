@@ -1,0 +1,148 @@
+[is='flynt-grid-all-posts'] {
+  &:last-child {
+    .grid-item:last-child {
+      border-bottom: 0;
+    }
+  }
+  
+  .grid {
+    column-gap: $spacing-small;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &-item {
+      border-bottom: 1px solid $black;
+      display: inline;
+      float: left;
+      margin: 0 15px 0 0;
+      text-decoration: none;
+      text-transform: uppercase;
+      width: calc(25% - 15px);
+
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        width: calc(50% - 15px);
+      }
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        width: 100%;
+      }
+
+      .featuredInfo {
+        align-items: center;
+        display: flex;
+        flex-flow: row wrap;
+        flex-grow: 1;
+        justify-content: flex-start;
+
+        &-top {
+          margin: $spacing-small 0;
+          width: 100%;
+
+          .date {
+            margin-right: $spacing-small;
+            text-transform: uppercase;
+          }
+
+          .post-type {
+            text-transform: uppercase;
+
+            &::before {
+              content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="11.46" height="11.46" viewBox="0 0 11.46 11.46"%3E%3Cg id="Group_43" data-name="Group 43" transform="translate(-1410.69 -282.05)"%3E%3Cline id="Line_8" data-name="Line 8" x2="9" transform="translate(1412.65 282.55)" fill="none" stroke="%23000" stroke-linecap="square" stroke-width="1"/%3E%3Cline id="Line_9" data-name="Line 9" x2="9" transform="translate(1421.65 282.65) rotate(90)" fill="none" stroke="%23000" stroke-linecap="square" stroke-width="1"/%3E%3Cline id="Line_12" data-name="Line 12" x2="15" transform="translate(1411.043 293.157) rotate(-45)" fill="none" stroke="%23000" stroke-width="1"/%3E%3C/g%3E%3C/svg%3E%0A');
+              display: inline-block;
+              margin-right: $spacing-small / 2;
+              text-decoration: none;
+            }
+          }
+        }
+
+        &-bottom {
+          flex-grow: 1;
+          margin-bottom: 0;
+          width: 100%;
+          
+          .title {
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .featuredImage {
+        flex-grow: 1;
+        margin: $spacing-small 0;
+        width: 100%;
+
+        img {
+          height: auto;
+          margin: 0;
+          object-fit: cover;
+          position: static;
+          width: 100%;
+        }
+        
+        figcaption {
+          display: none;
+        }
+      }
+    }
+
+    &-item--Artist {
+      .date {
+        display: none;
+      }
+    }
+  }
+
+  .grid-filter {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding-bottom: $spacing-large;
+    width: 100%;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      display: flex;
+      flex-flow: row nowrap;
+      overflow: scroll;
+      padding: 0;
+    }
+
+    .filter {
+      background-color: $white;
+      color: $black;
+      cursor: pointer;
+      flex-grow: 0;
+      text-align: center;
+      text-decoration: none;
+      width: 100px;
+
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        margin-bottom: $spacing-small;
+      }
+
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      &--active {
+        background-color: $black;
+        color: $white;
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .ajax-load-more-wrap.infinite.fading-blocks>.alm-btn-wrap .alm-load-more-btn {
+    background-image: url('http://localhost:10083/wp-content/plugins/ajax-load-more/core/img/eclipse.gif');
+  }
+}
