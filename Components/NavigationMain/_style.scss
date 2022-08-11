@@ -10,17 +10,13 @@
     padding: $spacing-large !important;
     position: relative;
     top: 0;
-    width: 50vw;
+    width: 100vw;
     z-index: 1000;
   }
 
   .wrapper {
     background-color: $color-background;
     height: auto;
-    padding-bottom: 0;
-    padding-left: $spacing-small;
-    padding-right: $spacing-small;
-    padding-top: $spacing-small;
   }
 
   .container {
@@ -48,8 +44,7 @@
 
     &-image {
       height: auto;
-      max-width: 19vw;
-      width: auto;
+      width: 150px;
     }
   }
 

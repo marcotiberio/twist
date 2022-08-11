@@ -1,31 +1,26 @@
-/* Custom styling for homepage */
+/* Custom styling for coming soon page */
 
-.page-coming-soon {
-  .mainHeader .wrapper,
-  .mainHeader .container,
+.page-coming-soon,
+.page-typography {
+  .mainHeader,
   .mainFooter {
     display: none;
   }
 
   body {
+    background-color: $red;
+    overflow: hidden;
     padding: 0;
   }
 
   .flyntComponent {
-    margin-bottom: 0;
-    padding: 0;
+    margin-bottom: 0 !important;
+    // padding: 0;
+  }
+}
 
-    &-listSocial {
-      bottom: 0;
-      padding: 10px;
-      position: fixed;
-      right: 0;
-      width: 100vw;
-      z-index: 1004;
-
-      @media (max-width: $breakpoint-mobile-horizontal) {
-        padding: 10px 15px;
-      }
-    }
+.page-typography {
+  .logo {
+    display: none;
   }
 }

@@ -4,21 +4,20 @@
 * Top level styles every element should inherit.
 */
 
-@include font-face('Rhetorik Sans Regular', 'RhetorikSansRegular', '400', 'normal');
-@include font-face('Rhetorik Sans Italic', 'RhetorikSansItalic', '400', 'italic');
-@include font-face('Rhetorik Sans Light', 'RhetorikSansLight', '400', 'normal');
-@include font-face('Rhetorik Sans Light Italic', 'RhetorikSansLightItalic', '300', 'italic');
-@include font-face('Rhetorik Sans Medium', 'RhetorikSansMedium', '400', 'normal');
-@include font-face('Rhetorik Sans Medium Italic', 'RhetorikSansMediumItalic', '500', 'italic');
-@include font-face('Rhetorik Serif Regular', 'RhetorikSerifRegular', '400', 'normal');
-@include font-face('Rhetorik Serif Italic', 'RhetorikSerifItalic', '400', 'italic');
+@include font-face('Cy', 'https://use.typekit.net/af/6998f4/00000000000000007735cabb/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3', '800', 'normal');
+@include font-face('SofiaProRegular', 'SofiaProRegular', '400', 'italic');
+@include font-face('SofiaProRegularItalic', 'SofiaProRegularItalic', '400', 'italic');
+@include font-face('SofiaProMedium', 'SofiaProMedium', '500', 'normal');
+@include font-face('SofiaProSemiBold', 'SofiaProSemiBold', '600', 'normal');
+@include font-face('SofiaProSemiBoldItalic', 'SofiaProSemiBoldItalic', '600', 'italic');
+
 
 html {
   background-color: $color-background;
   box-sizing: border-box;
   color: $color-text;
-  font-family: 'Rhetorik Sans Regular', sans-serif;
-  font-size: 16px;
+  font-family: 'SofiaProRegular', sans-serif;
+  font-size: 10px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   height: 100%;
@@ -28,7 +27,7 @@ html {
   // transition: all 0.2s linear;
 
   @media (max-width: $breakpoint-mobile-horizontal) {
-    font-size: 12px;
+    font-size: 10px;
   }
 
 
@@ -82,9 +81,26 @@ body {
 
 h1,
 .h1 {
-  font-size: 2.35rem;
+  font-family: 'Cy', sans-serif;
+  font-size: 5rem;
+  font-weight: 800;
   line-height: 1;
   // margin-bottom: $spacing-small;
+  // padding-top: $spacing-small;
+  text-transform: uppercase;
+
+  @media (min-width: $breakpoint-mobile-horizontal) {
+    font-size: 15rem;
+  }
+}
+
+h2,
+.h2 {
+  font-family: 'Cy', sans-serif;
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: $spacing-small;
   // padding-top: $spacing-small;
   // text-transform: uppercase;
 
@@ -93,26 +109,18 @@ h1,
   }
 }
 
-h2,
-.h2 {
-  font-size: 2rem;
+h3,
+.h3 {
+  font-family: 'Cy', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
   line-height: 1;
   margin-bottom: $spacing-small;
-  padding-top: $spacing-small;
+  // padding-top: $spacing-small;
   // text-transform: uppercase;
 
   @media (min-width: $breakpoint-mobile-horizontal) {
-    font-size: 3.85rem;
-  }
-}
-
-h3,
-.h3 {
-  font-size: 1.125rem;
-  padding-top: 1rem;
-
-  @media (min-width: $breakpoint-mobile-horizontal) {
-    font-size: 1.25rem;
+    font-size: 4rem;
   }
 }
 
@@ -155,11 +163,12 @@ p,
 .paragraph,
 table,
 figure {
+  font-size: 2.5rem;
   margin: 0 0 2.25rem;
 }
 
 .small {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 hr {
@@ -336,17 +345,14 @@ button {
 
 .button {
   appearance: none;
-  background-color: $black;
-  border: 1px solid $black;
-  border-radius: 1rem;
+  border-radius: 50px;
   color: $white;
   cursor: pointer;
   display: inline-block;
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: 400;
+  font-family: 'SofiaProSemiBold', sans-serif;
+  font-size: 1.5rem;
   line-height: inherit;
-  padding: 5px 10px;
+  padding: 10px 30px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -367,16 +373,29 @@ button {
     color: $black;
   }
 
-  &--ghost {
-    background-color: transparent;
-    border-color: $color-text;
-    color: $color-text;
+  &--red {
+    background-color: $red;
+    border: 1px solid $red;
+    color: $white;
 
     &:hover,
     &:focus {
-      background-color: transparent;
-      border-color: $color-background-dark;
-      color: $color-background-dark;
+      background-color: $white;
+      border: 1px solid $red;
+      color: $red;
+    }
+  }
+
+  &--white {
+    background-color: $white;
+    border: 1px solid $red;
+    color: $red;
+
+    &:hover,
+    &:focus {
+      background-color: $red;
+      border: 1px solid $red;
+      color: $white;
     }
   }
 
@@ -407,33 +426,6 @@ button {
         background-position: right center;
       }
     }
-
-    // &::before {
-    //   background-color: $color-text;
-    //   bottom: 0;
-    //   content: '';
-    //   height: 1px;
-    //   left: 0;
-    //   position: absolute;
-    //   transition: background-color 0.2s ease-out;
-    //   width: 100%;
-    // }
-
-    // &::after {
-    //   $color-accent-rgb: red($color-accent), green($color-accent), blue($color-accent);
-    //   $color-background-dark-rgb: red($color-background-dark), green($color-background-dark), blue($color-background-dark);
-
-    //   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.586 5L.293 8.293a1 1 0 1 0 1.414 1.414l4-4a1 1 0 0 0 0-1.414l-4-4A1 1 0 1 0 .293 1.707L3.586 5z' fill='rgb(#{$color-accent-rgb})'/%3E%3Cpath d='M13.586 5l-3.293 3.293a1 1 0 0 0 1.414 1.414l4-4a1 1 0 0 0 0-1.414l-4-4a1 1 0 0 0-1.414 1.414L13.586 5z' fill='rgb(#{$color-background-dark-rgb})'/%3E%3C/svg%3E");
-    //   background-position: left center;
-    //   background-repeat: no-repeat;
-    //   content: '';
-    //   display: inline-block;
-    //   height: 10px;
-    //   margin-left: 10px;
-    //   transition: background-position 0.2s ease-out;
-    //   vertical-align: baseline;
-    //   width: 6px;
-    // }
   }
 }
 
