@@ -91,9 +91,19 @@ function getConfig()
                         'selector' => '*'
                     ],
                     [
+                        'title' => 'Hero Title',
+                        'classes' => 'heroTitle',
+                        'selector' => 'h1'
+                    ],
+                    [
                         'title' => 'Heading 2',
                         'classes' => 'h2',
                         'selector' => '*'
+                    ],
+                    [
+                        'title' => 'Section Title',
+                        'classes' => 'sectionTitle',
+                        'selector' => 'h2'
                     ],
                     [
                         'title' => 'Heading 3',
@@ -132,13 +142,8 @@ function getConfig()
                 'icon' => '',
                 'items' => [
                     [
-                        'title' => 'Sans',
-                        'classes' => 'sans',
-                        'selector' => '*'
-                    ],
-                    [
-                        'title' => 'Serif',
-                        'classes' => 'serif',
+                        'title' => 'small',
+                        'classes' => 'Small',
                         'selector' => '*'
                     ]
                 ]
@@ -152,16 +157,16 @@ function getConfig()
                         'classes' => 'button',
                         'selector' => 'a,button'
                     ],
-                    // [
-                    //     'title' => 'Button Ghost',
-                    //     'classes' => 'button--ghost',
-                    //     'selector' => '.button'
-                    // ],
-                    // [
-                    //     'title' => 'Button Small',
-                    //     'classes' => 'button--small',
-                    //     'selector' => '.button'
-                    // ],
+                    [
+                        'title' => 'Button Red',
+                        'classes' => 'button--red',
+                        'selector' => '.button'
+                    ],
+                    [
+                        'title' => 'Button White',
+                        'classes' => 'button--white',
+                        'selector' => '.button'
+                    ],
                     // [
                     //     'title' => 'Button Link',
                     //     'classes' => 'button--link',
@@ -169,17 +174,17 @@ function getConfig()
                     // ]
                 ]
             ],
-            [
-                'title' => 'Highlight',
-                'icon' => '',
-                'items' => [
-                    [
-                        'title' => 'Pill Circle',
-                        'classes' => 'pillCircle',
-                        'selector' => '*'
-                    ]
-                ]
-            ]
+            // [
+            //     'title' => 'Highlight',
+            //     'icon' => '',
+            //     'items' => [
+            //         [
+            //             'title' => 'Pill Circle',
+            //             'classes' => 'pillCircle',
+            //             'selector' => '*'
+            //         ]
+            //     ]
+            // ]
         ],
         'toolbars' => [
             'default' => [

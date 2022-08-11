@@ -1,5 +1,5 @@
 .mce-content-body {
-  background-color: #fff;
+  background-color: #ededed;
 }
 
 #tinymce {
@@ -8,7 +8,7 @@
     font-family: 'Cy', sans-serif;
     font-size: 70px;
     font-weight: 800;
-    line-height: 55px;
+    line-height: 75px;
     margin: 0;
   }
 
@@ -17,7 +17,7 @@
     font-family: 'Cy', sans-serif;
     font-size: 50px;
     font-weight: 800;
-    line-height: 45px;
+    line-height: 55px;
     margin: 0;
   }
 
@@ -33,11 +33,19 @@
   p,
   .p
   .paragraph,
-  .small,
   table,
   span {
     font-family: 'SofiaProRegular', sans-serif;
     font-size: 25px;
+    line-height: 27px;
+    margin: 0;
+    margin-block-end: 1.2rem;
+    margin-block-start: 0;
+  }
+
+  .small {
+    font-family: 'SofiaProRegular', sans-serif;
+    font-size: 15px;
     line-height: 27px;
     margin: 0;
     margin-block-end: 1.2rem;

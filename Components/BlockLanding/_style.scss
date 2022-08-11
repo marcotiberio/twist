@@ -12,6 +12,7 @@
     flex-flow: column wrap;
     height: calc(100vh - 80px);
     justify-content: center;
+    overflow: auto;
     position: fixed;
     right: $spacing-small;
     text-align: center;
