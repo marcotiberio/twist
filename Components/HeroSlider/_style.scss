@@ -60,7 +60,7 @@
       &--prev {
         left: 15px;
 
-        @media (min-width: $breakpoint-tablet-horizontal) {
+        @media (min-width: $breakpoint-tablet) {
           left: 45px;
         }
       }
@@ -68,7 +68,7 @@
       &--next {
         right: 15px;
 
-        @media (min-width: $breakpoint-tablet-horizontal) {
+        @media (min-width: $breakpoint-tablet) {
           right: 45px;
         }
       }
@@ -131,7 +131,7 @@
       padding: $spacing-large $spacing-large * 2;
     }
 
-    @media (min-width: $breakpoint-tablet-horizontal) {
+    @media (min-width: $breakpoint-tablet) {
       padding-bottom: $spacing-large;
       padding-left: $spacing-large * 2;
     }

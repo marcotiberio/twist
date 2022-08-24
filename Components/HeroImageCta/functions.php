@@ -53,7 +53,7 @@ function getACFLayout()
                 'tabs' => 'visual,text',
                 'media_upload' => 0,
                 'delay' => 1,
-                'required' => 1,
+                'required' => 0,
                 'instructions' => __('The content overlaying the image. Character Recommendations: Title: 30-100, Content: 80-250.', 'flynt'),
             ],
             [

@@ -6,7 +6,7 @@ use Flynt\FieldVariables;
 use Flynt\Utils\Options;
 use Timber\Timber;
 
-const POST_TYPE = 'podcast';
+const POST_TYPE = 'post';
 
 add_filter('Flynt/addComponentData?name=GridPostsLatest', function ($data) {
     $postType = POST_TYPE;
@@ -19,7 +19,7 @@ add_filter('Flynt/addComponentData?name=GridPostsLatest', function ($data) {
         'category' => join(',', array_map(function ($taxonomy) {
             return $taxonomy->term_id;
         }, $data['taxonomies'])),
-        'posts_per_page' => $data['options']['columns'],
+        'posts_per_page' => $data['postsPerPage'],
         'ignore_sticky_posts' => 1,
         'post__not_in' => array(get_the_ID())
     ]);
@@ -60,8 +60,20 @@ function getACFLayout()
                 'save_terms' => 0,
                 'load_terms' => 0,
                 'return_format' => 'object'
+            ],
+            [
+                'label' => __('Number of posts shown', 'flynt'),
+                'name' => 'postsPerPage',
+                'type' => 'button_group',
+                'choices' => [
+                    '3' => 'Three',
+                    '-1' => 'All',
+                ],
+                'default_value' => 'All',
+                'layout' => 'horizontal',
+                'return_format' => 'value',
             ]
-        ]
+        ],
     ];
 }
 

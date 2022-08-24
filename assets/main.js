@@ -7,10 +7,12 @@ import 'swiper/swiper-bundle.css'
 import './scripts/custom.js'
 import './scripts/filters.js'
 import './scripts/navigation.js'
-// import './scripts/scrollTrigger.js'
+// import './scripts/logo.js'
+import './scripts/scrollTrigger.js'
 import $ from 'jquery'
 import Swiper, { Navigation, A11y, Autoplay } from 'swiper/swiper.esm'
 import feather from 'feather-icons'
+import { appendMaps, initMap } from './scripts/map.js'
 import smoothscroll from 'smoothscroll-polyfill'
 
 import installCE from 'document-register-element/pony'
@@ -22,6 +24,14 @@ window.jQuery = $
 window.lazySizesConfig = window.lazySizesConfig || {}
 window.lazySizesConfig.preloadAfterLoad = true
 require('lazysizes')
+
+$(document).ready(function () {
+  feather.replace({
+    'stroke-width': 1
+  })
+  global.initMap = initMap
+  appendMaps()
+})
 
 $(document).ready(function () {
   feather.replace({
@@ -50,3 +60,4 @@ importAll(require.context('../Components/', true, /\/script\.js$/))
 require.resolve('./scripts/custom.js')
 require.resolve('./scripts/filters.js')
 require.resolve('./scripts/navigation.js')
+require.resolve('./scripts/logo.js')

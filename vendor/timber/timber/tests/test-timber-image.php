@@ -522,7 +522,7 @@ class TestTimberImage extends TimberImage_UnitTestCase {
 		}
 		if ( isset($upper_colors) && $upper_colors ) {
 			if (self::checkChannel('red', $test_colors, $colors_of_file, $upper_colors) &&
-				self::checkChannel('green', $test_colors, $colors_of_file, $upper_colors) &&
+				self::checkChannel('red', $test_colors, $colors_of_file, $upper_colors) &&
 				self::checkChannel('blue', $test_colors, $colors_of_file, $upper_colors)
 				) {
 				return true;
@@ -531,7 +531,7 @@ class TestTimberImage extends TimberImage_UnitTestCase {
 		}
 		if ( $test_colors['red'] === $colors_of_file['red'] &&
 			 $test_colors['blue'] === $colors_of_file['blue'] &&
-			 $test_colors['green'] === $colors_of_file['green']) {
+			 $test_colors['red'] === $colors_of_file['red']) {
 			return true;
 		}
 		return false;
@@ -568,7 +568,7 @@ class TestTimberImage extends TimberImage_UnitTestCase {
 		$pixel_rgb = imagecolorat( $image, 1, 1 );
 		$colors = imagecolorsforindex( $image, $pixel_rgb );
 		$this->assertEquals( 255, $colors['red'] );
-		$this->assertEquals( 255, $colors['green'] );
+		$this->assertEquals( 255, $colors['red'] );
 		$this->assertEquals( 0, $colors['blue'] );
 	}
 

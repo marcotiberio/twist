@@ -2,49 +2,47 @@
   @include reset-list;
   backface-visibility: hidden;
   background-color: $color-background;
-  height: calc(100% - #{$navigation-height});
+  height: 0;
   left: 0;
   margin: 0;
+  opacity: 0;
   overflow-y: auto;
-  padding-bottom: 30px;
-  padding-top: 30px;
+  padding-bottom: $spacing-large;
+  padding-top: $spacing-large*3;
   position: fixed;
-  top: $navigation-height;
-  transform: translateY(-100%);
-  transition: transform 0.45s cubic-bezier(0.19, 1, 0.22, 1), visibility 0.45s;
-  visibility: hidden;
+  top: -100%;
+  transform: translateY(0);
+  transition: opacity 0.25s;
   width: 100%;
-  z-index: 98;
+  z-index: -1;
 
   .admin-bar & {
-    top: $navigation-height + 46px;
+    top: $nav-height + 46px;
 
     @media (min-width: 783px) {
-      top: $navigation-height + 32px;
+      top: $nav-height-mobile + 32px;
     }
   }
 
   &-item--current {
     .menu-link {
-      color: $color-text;
+      color: $red;
       text-decoration: underline;
     }
   }
 
   &-link {
-    color: $color-text;
+    color: $red;
     display: block;
-    font-size: 2.35rem;
-    font-weight: 400;
     margin: 0;
-    padding: $spacing-small $spacing-large;
-    text-align: center;
+    padding: $spacing-small;
+    text-align: left;
     text-decoration: none;
     text-transform: uppercase;
     transition: color 0.2s ease-out;
 
     &:focus {
-      color: $color-text;
+      color: $red;
     }
 
     @media (min-width: $breakpoint-tablet) {
@@ -56,10 +54,16 @@
   &-submenu {
     @include reset-list;
     display: none;
+
+    .menu-link {
+      padding-left: $spacing-large*1.5;
+    }
   }
 }
 
 &.flyntComponent-menuIsOpen .menu {
+  height: 100%;
+  opacity: 1;
+  top: 0;
   transform: translateY(0);
-  visibility: visible;
 }

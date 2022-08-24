@@ -18,7 +18,7 @@
 
     &--columns3 {
       .grid-item {
-        @media (min-width: $breakpoint-tablet-horizontal) {
+        @media (min-width: $breakpoint-tablet) {
           width: 33.33%;
         }
       }

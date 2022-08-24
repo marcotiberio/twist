@@ -1,26 +1,33 @@
 .hamburger {
   cursor: pointer;
   display: block;
-  height: 22px;
+  height: 30px;
   margin-left: $spacing-small;
   position: relative;
-  width: 22px;
+  width: auto;
+
+  .h3 {
+    color: $red;
+    font-size: 2rem;
+    margin: 0;
+    text-transform: uppercase;
+  }
 
   &::after {
     content: '';
   }
 
   &::after,
-  &-barPrimary,
+  &-close,
   &-barSecondary {
-    background-color: $black;
-    display: block;
-    height: 1px;
-    left: 0;
-    position: absolute;
-    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out,
-      background-color 0.2s ease-in-out;
-    width: 22px;
+    // background-color: $red;
+    display: none;
+    // height: 3px;
+    // left: 0;
+    // position: absolute;
+    // transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out,
+    //   background-color 0.2s ease-in-out;
+    // width: 30px;
   }
 
   
@@ -44,11 +51,18 @@
     transform: scale(0) translateY(-8px);
   }
 
-  &-barPrimary {
-    transform: rotate(45deg);
+  &-open {
+    display: none;
   }
 
-  &-barSecondary {
-    transform: rotate(-45deg);
+  &-close {
+    display: block;
+    opacity: 1;
+    // transform: rotate(45deg);
   }
+
+  // &-barSecondary {
+  //   display: block;
+  //   transform: rotate(-45deg);
+  // }
 }

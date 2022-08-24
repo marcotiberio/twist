@@ -28,7 +28,7 @@
       justify-content: center;
       padding-left: 1rem;
 
-      @media (min-width: $breakpoint-mobile-horizontal) {
+      @media (min-width: $breakpoint-mobile) {
         padding-left: 2rem;
       }
     }

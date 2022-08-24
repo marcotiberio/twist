@@ -1,8 +1,6 @@
-$breakpoint-mobile-horizontal: 480px;
-$breakpoint-tablet: 768px;
-$breakpoint-tablet-horizontal: 1024px;
-$breakpoint-desktop: 1280px;
-$breakpoint-desktop-wide: 1440px;
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 1024px;
+$breakpoint-desktop: 1440px;
 
 $container-max-width: 1440px;
 $content-max-width: 600px;
@@ -12,17 +10,12 @@ $component-spacing-desktop: 120px;
 $component-spacing-tablet: 80px;
 $component-spacing-mobile: 40px;
 $gap: 24px;
+$nav-height: 120px;
+$nav-height-mobile: 70px;
 
-$black: #000;
+$black: #3e3e3e;
 $white: #fff;
 $red: #f00;
-$pink: #fdecec;
-$lime: #c0ff00;
-$green: #153436;
-$lightgreen: #a3dd94;
-$orange: #f40;
-$blue: #5dcfd0;
-$eggshell: #f9f7e2;
 
 $color-brand: #0d8eff;
 $color-accent: #f96417;

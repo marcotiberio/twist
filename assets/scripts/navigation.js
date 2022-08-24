@@ -1,12 +1,25 @@
 import $ from 'jquery'
 
 $(document).ready(function () {
+  var header = $('.mainHeader')
+  var buttonSubmenu = $('.open-submenu')
+
+  $(buttonSubmenu).mouseenter(function () {
+    $(header).addClass('mainHeader--open')
+  })
+
+  $(buttonSubmenu).mouseleave(function () {
+    $(header).removeClass('mainHeader--open')
+  })
+})
+
+$(document).ready(function () {
   var scrollPos = 0
   var navDesktop = document.querySelector('header')
 
   function checkScrollUp () {
     var windowY = window.scrollY
-    console.log([windowY, scrollPos])
+    // console.log([windowY, scrollPos])
     var showHeader
 
     if (windowY < scrollPos) {

@@ -76,10 +76,10 @@ class TestTimberIntegrations extends Timber_UnitTestCase {
 
 	function testACFCustomFieldTermTag() {
 		$tid = $this->factory->term->create();
-		update_field( 'color', 'green', 'post_tag_'.$tid );
+		update_field( 'color', 'red', 'post_tag_'.$tid );
 		$term = new TimberTerm( $tid );
 		$str = '{{term.color}}';
-		$this->assertEquals( 'green', Timber::compile_string( $str, array( 'term' => $term ) ) );
+		$this->assertEquals( 'red', Timber::compile_string( $str, array( 'term' => $term ) ) );
 	}
 
 	function testACFGetFieldTermTag() {

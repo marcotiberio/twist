@@ -196,6 +196,8 @@ function getConfig()
                     'strikethrough',
                     'blockquote',
                     '|',
+                    'forecolor',
+                    '|',
                     'alignleft',
                     'aligncenter',
                     'alignright',

@@ -7,7 +7,7 @@
       @include grid(2, $gutter-vertical: 48px);
     }
 
-    @media (min-width: $breakpoint-tablet-horizontal) {
+    @media (min-width: $breakpoint-tablet) {
       @include grid(3, $gutter-vertical: 48px);
     }
   }
@@ -88,7 +88,7 @@
         }
       }
 
-      @media (min-width: $breakpoint-tablet-horizontal) {
+      @media (min-width: $breakpoint-tablet) {
         padding: 0 30px;
       }
     }

@@ -9,7 +9,7 @@ The purpose of this page is to identify helpful tools for working with Twig.
 
 ## Text editor add-ons
 
-* Text Mate & Sublime text bundle – [Anomareh's PHP-Twig](https://github.com/Anomareh/PHP-Twig.tmbundle)
+* Text Mate & Subred text bundle – [Anomareh's PHP-Twig](https://github.com/Anomareh/PHP-Twig.tmbundle)
 * Emacs – [Web Mode](http://web-mode.org/)
 * Geany – Add [Twig/Symfony2 detection and highlighting](https://wiki.geany.org/howtos/geany_and_django#twigsymfony2_support)
 * PhpStorm – Built in coloring and code hinting. The Twig extension is recognized and has been for some time. [Twig Details for PhpStorm](http://blog.jetbrains.com/phpstorm/2013/06/twig-support-in-phpstorm/).

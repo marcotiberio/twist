@@ -1,5 +1,5 @@
 [is='flynt-block-soundcloud-oembed'] {
-  @media (max-width: $breakpoint-tablet-horizontal) {
+  @media (max-width: $breakpoint-tablet) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
@@ -11,7 +11,7 @@
     justify-content: flex-end;
     width: 100%;
 
-    @media (max-width: $breakpoint-tablet-horizontal) {
+    @media (max-width: $breakpoint-tablet) {
       grid-column-end: 5;
       grid-column-start: 1;
     }

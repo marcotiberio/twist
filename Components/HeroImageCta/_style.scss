@@ -1,34 +1,11 @@
-@import 'mixins';
-
 [is='flynt-hero-image-cta'] {
-  @include align-image('mobile');
   align-items: center;
   display: flex;
   justify-content: center;
 
-  &:not(.fullWidth) .container {
-    @include center(100%, $padding: 0);
+  .container {
     position: relative;
-    width: 100%;
-
-    @media (min-width: $breakpoint-tablet) {
-      @include center($container-max-width, $padding: 0);
-    }
-
-    .content-picture {
-      left: $spacing-small;
-      right: $spacing-small;
-
-      @media (min-width: $breakpoint-tablet) {
-        left: $spacing-large;
-        right: $spacing-large;
-      }
-
-      @media (min-width: $breakpoint-desktop) {
-        left: $spacing-large;
-        right: $spacing-large;
-      }
-    }
+    width: 100vw;
   }
 
   &,
@@ -50,38 +27,24 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: $component-spacing-mobile $spacing-small;
     position: relative;
     width: 100%;
 
-    @media (min-width: $breakpoint-desktop) {
-      padding: 50px 0;
-    }
-
     &-wrapper {
-      align-content: center;
+      align-content: flex-start;
+      background: rgb(0, 0, 0);
+      background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 20%);
       display: flex;
       flex-direction: column;
       flex-shrink: 0;
       height: 100%;
-      justify-content: center;
+      justify-content: flex-end;
       justify-items: center;
-      max-width: $content-max-width;
-      width: 100%;
-    }
-
-    &-html {
-      @include reset-content-margins;
-      position: relative;
-      text-align: center;
+      padding: $spacing-small;
       width: 100%;
 
-      &:not([class*='theme']) {
-        color: #fff;
-
-        #{$heading-selectors} {
-          color: inherit;
-        }
+      @media (min-width: $breakpoint-tablet) {
+        padding: $spacing-large;
       }
     }
 
@@ -111,10 +74,16 @@
       object-fit: cover;
       width: 100%;
     }
-  }
 
-  @media (min-width: $breakpoint-tablet) {
-    @include align-image('desktop');
+    &-html {
+      * {
+        color: $white;
+      }
+      
+      @media (min-width: $breakpoint-tablet + 1px) {
+        width: 50%;
+      }
+    }
   }
 
   @media (max-width: $content-max-width + 29px) {

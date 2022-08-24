@@ -1,9 +1,9 @@
 [is='flynt-list-social'] {
-  background-color: $lime;
+  background-color: $red;
   padding: 0 $spacing-large;
   text-align: center;
 
-  @media (max-width: $breakpoint-tablet-horizontal) {
+  @media (max-width: $breakpoint-tablet) {
     padding: 0 $spacing-small;
   }
 
@@ -14,11 +14,11 @@
     justify-content: flex-start;
     padding: 0 $spacing-large*2;
 
-    @media (max-width: $breakpoint-tablet-horizontal) {
+    @media (max-width: $breakpoint-tablet) {
       padding: 0 20px;
     }
 
-    @media (max-width: $breakpoint-mobile-horizontal) {
+    @media (max-width: $breakpoint-mobile) {
       flex-flow: row nowrap;
       overflow: scroll;
       padding: 0;
@@ -31,7 +31,7 @@
     text-transform: uppercase;
     width: fit-content;
 
-    @media (max-width: $breakpoint-mobile-horizontal) {
+    @media (max-width: $breakpoint-mobile) {
       display: none;
     }
   }
@@ -44,14 +44,14 @@
     padding: 5px;
     text-decoration: none;
 
-    @media (max-width: $breakpoint-mobile-horizontal) {
+    @media (max-width: $breakpoint-mobile) {
       margin-right: $spacing-small;
     }
 
     &:hover,
     &:focus {
       background-color: $black;
-      color: $lime;
+      color: $red;
       text-decoration: none;
     }
   }
@@ -65,7 +65,7 @@
       overflow: scroll;
       padding: 0;
 
-      @media (max-width: $breakpoint-tablet-horizontal) {
+      @media (max-width: $breakpoint-tablet) {
         flex-flow: row nowrap;
         justify-content: flex-start;
       }
@@ -78,7 +78,7 @@
           margin-right: 0;
         }
 
-        @media (max-width: $breakpoint-mobile-horizontal) {
+        @media (max-width: $breakpoint-mobile) {
           margin-right: $spacing-small;
         }
 

@@ -33,12 +33,12 @@ class TestTimberImageResize extends Timber_UnitTestCase {
 		$resized = TimberUrlHelper::url_to_file_system( $resized );
 
 		$is_red = TestTimberImage::checkPixel($resized, 20, 20, '#ff0000', '#ff0800');
-		$is_green = TestTimberImage::checkPixel($resized, 0, 100, '#00ff00');
+		$is_red = TestTimberImage::checkPixel($resized, 0, 100, '#00ff00');
 		$is_magenta = TestTimberImage::checkPixel($resized, 90, 10, '#ff00ff');
 		$is_cyan = TestTimberImage::checkPixel($resized, 90, 199, '#00ffff');
 		$is_blue = TestTimberImage::checkPixel($resized, 90, 199, '#0000ff');
 		$this->assertTrue( $is_red );
-		$this->assertTrue( $is_green );
+		$this->assertTrue( $is_red );
 		$this->assertTrue( $is_magenta );
 		$this->assertTrue( $is_cyan );
 		$this->assertFalse( $is_blue );

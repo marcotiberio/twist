@@ -42,7 +42,7 @@
   }
 
   &.layoutFloating {
-    @media (min-width: $breakpoint-mobile-horizontal) {
+    @media (min-width: $breakpoint-mobile) {
       bottom: $spacing-small;
       left: $spacing-small;
       max-width: 380px;

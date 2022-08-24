@@ -49,7 +49,7 @@
       grid-template-columns: repeat(2, 1fr);
       padding: $spacing-small 0;
 
-      @media (max-width: $breakpoint-mobile-horizontal) {
+      @media (max-width: $breakpoint-mobile) {
         display: grid;
         grid-auto-rows: auto;
         grid-template-columns: 1fr;
@@ -97,7 +97,7 @@
         }
       }
 
-      @media (min-width: $breakpoint-tablet-horizontal) {
+      @media (min-width: $breakpoint-tablet) {
         padding: 0 30px;
       }
     }

@@ -42,6 +42,22 @@ function getACFLayout()
                 'delay' => 1,
                 'media_upload' => 0,
                 'required' => 0,
+            ],
+            [
+                'label' => __('Options', 'flynt'),
+                'name' => 'optionsTab',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0,
+            ],
+            [
+                'label' => '',
+                'name' => 'options',
+                'type' => 'group',
+                'layout' => 'block',
+                'sub_fields' => [
+                    FieldVariables\getTheme(),
+                ]
             ]
         ]
     ];

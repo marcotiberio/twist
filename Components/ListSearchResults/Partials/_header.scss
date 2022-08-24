@@ -11,7 +11,7 @@ $search-form-spacing: 6px;
     display: flex;
     flex-direction: column;
 
-    @media (min-width: $breakpoint-mobile-horizontal) {
+    @media (min-width: $breakpoint-mobile) {
       flex-direction: row;
     }
   }
@@ -20,7 +20,7 @@ $search-form-spacing: 6px;
     flex-grow: 1;
     margin-bottom: $spacing-small;
 
-    @media (min-width: $breakpoint-mobile-horizontal) {
+    @media (min-width: $breakpoint-mobile) {
       margin-bottom: 0;
       margin-right: $search-form-spacing;
     }
@@ -37,7 +37,7 @@ $search-form-spacing: 6px;
     padding: 0 20px 0 (20px - $search-form-spacing); // 20px => .boxPadding (mobile)
     width: 100%;
 
-    @media (min-width: $breakpoint-tablet-horizontal) {
+    @media (min-width: $breakpoint-tablet) {
       padding: 0 20px 0 (30px - $search-form-spacing); // 30px => .boxPadding (desktop)
     }
   }

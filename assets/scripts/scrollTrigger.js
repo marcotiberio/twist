@@ -30,7 +30,7 @@ ScrollTrigger.batch('.move-in', {
 const parallaxBoxes = gsap.utils.toArray('.parallax')
 parallaxBoxes.forEach((box, i) => {
   // Set up your animation
-  const anim = gsap.to(box, { y: '-20vh', scaleX: 1.1, scaleY: 1.1, ease: 'none' })
+  const anim = gsap.to(box, { y: '-20vh', scaleX: 1, scaleY: 1, ease: 'none' })
   // Use callbacks to control the state of the animation
   ScrollTrigger.create({
     trigger: box,

@@ -6,7 +6,7 @@
     height: auto;
     justify-content: space-between;
 
-    @media (max-width: $breakpoint-mobile-horizontal) {
+    @media (max-width: $breakpoint-mobile) {
       display: block;
     }
   }
@@ -24,7 +24,7 @@
     }
 
     &-right {
-      @media (max-width: $breakpoint-mobile-horizontal) {
+      @media (max-width: $breakpoint-mobile) {
         margin-top: 25px;
 
         p:first-child {

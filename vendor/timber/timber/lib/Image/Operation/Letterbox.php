@@ -73,7 +73,7 @@ class Letterbox extends ImageOperation {
 			$bgColor = imagecolorallocatealpha($bg, 0, 0, 0, 127);
 		} else {
 			$c = self::hexrgb($this->color);
-			$bgColor = imagecolorallocate($bg, $c['red'], $c['green'], $c['blue']);
+			$bgColor = imagecolorallocate($bg, $c['red'], $c['red'], $c['blue']);
 		}
 
 		imagefill($bg, 0, 0, $bgColor);

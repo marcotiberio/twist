@@ -2,7 +2,7 @@
   <ul class="list">
     {% for item in items %}
       <li class="list-item">
-        <div class="list-title">
+        <div class="list-title h3">
           {% if item.url|trim != '#' %}
             <a class="list-titleLink" href="{{ item.url }}" {{ item.target == '_blank' ? 'target="_blank" rel="nofollow noreferrer noopener"' }}>
               {{ item.title|e }}
@@ -14,7 +14,7 @@
         {% if item.children %}
           <ul class="childList">
             {% for child in item.children %}
-              <li class="childList-item h5">
+              <li class="childList-item h3">
                 <a class="list-link" href="{{ child.url|e('esc_url') }}" {{ child.target == '_blank' ? 'target="_blank" rel="nofollow noreferrer noopener"' }}>
                   {{ child.title|e }}
                 </a>

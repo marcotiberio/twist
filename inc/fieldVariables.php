@@ -18,9 +18,11 @@ function getTheme()
         'ajax' => 0,
         'choices' => [
             '' => __('(none)', 'flynt'),
-            'themeLight' => __('Light', 'flynt'),
-            'themeDark' => __('Dark', 'flynt'),
-            'themeHero' => __('Hero', 'flynt'),
+            // 'themeLight' => __('Light', 'flynt'),
+            // 'themeDark' => __('Dark', 'flynt'),
+            // 'themeHero' => __('Hero', 'flynt'),
+            'themeWhite' => __('White', 'flynt'),
+            'themeRed' => __('Red', 'flynt'),
         ]
     ];
 }
@@ -33,5 +35,33 @@ function getIcon()
         'type' => 'text',
         'instructions' => __('Enter a valid icon name from <a href="https://feathericons.com">Feather Icons</a> (e.g. `check-circle`).', 'flynt'),
         'required' => 1
+    ];
+}
+
+function getSectionId()
+{
+    return [
+        [
+            'label' => __('Section ID', 'flynt'),
+            'name' => 'sectionId',
+            'type' => 'text',
+            'wrapper' => [
+                'width' => '100',
+            ],
+        ],
+    ];
+}
+
+function getBackgroundColor()
+{
+    return [
+        [
+            'label' => __('Background COlor', 'flynt'),
+            'name' => 'backgroundColor',
+            'type' => 'color_picker',
+            'wrapper' => [
+                'width' => '100',
+            ],
+        ],
     ];
 }

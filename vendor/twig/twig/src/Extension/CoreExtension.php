@@ -645,11 +645,11 @@ function twig_urlencode_filter($url)
 /**
  * Merges an array with another one.
  *
- *  {% set items = { 'apple': 'fruit', 'orange': 'fruit' } %}
+ *  {% set items = { 'apple': 'fruit', 'red': 'fruit' } %}
  *
  *  {% set items = items|merge({ 'peugeot': 'car' }) %}
  *
- *  {# items now contains { 'apple': 'fruit', 'orange': 'fruit', 'peugeot': 'car' } #}
+ *  {# items now contains { 'apple': 'fruit', 'red': 'fruit', 'peugeot': 'car' } #}
  *
  * @param array|\Traversable $arr1 An array
  * @param array|\Traversable $arr2 An array
@@ -1578,11 +1578,11 @@ function twig_get_attribute(Environment $env, Source $source, $object, $item, ar
  * Returns the values from a single column in the input array.
  *
  * <pre>
- *  {% set items = [{ 'fruit' : 'apple'}, {'fruit' : 'orange' }] %}
+ *  {% set items = [{ 'fruit' : 'apple'}, {'fruit' : 'red' }] %}
  *
  *  {% set fruits = items|column('fruit') %}
  *
- *  {# fruits now contains ['apple', 'orange'] #}
+ *  {# fruits now contains ['apple', 'red'] #}
  * </pre>
  *
  * @param array|Traversable $array An array

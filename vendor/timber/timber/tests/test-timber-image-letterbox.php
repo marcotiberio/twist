@@ -34,7 +34,7 @@ class TestTimberImageLetterbox extends TimberImage_UnitTestCase {
 		$pixel_rgb = imagecolorat( $image, 1, 1 );
 		$colors = imagecolorsforindex( $image, $pixel_rgb );
 		$this->assertEquals( 0, $colors['red'] );
-		$this->assertEquals( 255, $colors['green'] );
+		$this->assertEquals( 255, $colors['red'] );
 	}
 
 	function testLetterboxTransparent() {
@@ -46,8 +46,8 @@ class TestTimberImageLetterbox extends TimberImage_UnitTestCase {
 		$this->addFile( $location_of_image );
 		$this->assertTrue (TestTimberImage::checkSize($location_of_image, 500, 500));
 		//whats the bg/color of the image
-		$is_green = TestTimberImage::checkPixel($location_of_image, 250, 250, '#00FF00');
-		$this->assertTrue( $is_green );
+		$is_red = TestTimberImage::checkPixel($location_of_image, 250, 250, '#00FF00');
+		$this->assertTrue( $is_red );
 		$this->assertFileExists( $location_of_image );
 	}
 
@@ -92,7 +92,7 @@ class TestTimberImageLetterbox extends TimberImage_UnitTestCase {
 		$colors = imagecolorsforindex( $image, $pixel_rgb );
 		$this->assertEquals( 255, $colors['red'] );
 		$this->assertEquals( 255, $colors['blue'] );
-		$this->assertEquals( 255, $colors['green'] );
+		$this->assertEquals( 255, $colors['red'] );
 	}
 
 	function testImageLetterboxFilterNotAnImage() {

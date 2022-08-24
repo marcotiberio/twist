@@ -31,7 +31,7 @@
     .acceptance {
       width: 50%;
 
-      @media (max-width: $breakpoint-mobile-horizontal) {
+      @media (max-width: $breakpoint-mobile) {
         width: 50%;
       }
     }
@@ -51,7 +51,7 @@
       transition: all 0.2s ease-in-out;
       width: 50%;
 
-      @media (max-width: $breakpoint-mobile-horizontal) {
+      @media (max-width: $breakpoint-mobile) {
         text-align: right;
         width: 50%;
       }
@@ -79,12 +79,12 @@
     margin-top: $spacing-small;
     width: 100%;
 
-    @media (max-width: $breakpoint-tablet-horizontal) {
+    @media (max-width: $breakpoint-tablet) {
       margin: 0;
       width: 100%;
     }
 
-    @media (max-width: $breakpoint-mobile-horizontal) {
+    @media (max-width: $breakpoint-mobile) {
       margin: 0;
       width: 100%;
     }
@@ -127,7 +127,7 @@
     }
 
     &-row-2 {
-      @media (min-width: $breakpoint-mobile-horizontal) {
+      @media (min-width: $breakpoint-mobile) {
         @include grid(2, $gutter-horizontal: 16px);
       }
 
@@ -137,7 +137,7 @@
     }
 
     &-row-3 {
-      @media (min-width: $breakpoint-mobile-horizontal) {
+      @media (min-width: $breakpoint-mobile) {
         @include grid(3, $gutter-horizontal: 16px);
       }
 
@@ -147,7 +147,7 @@
     }
 
     &-row-2-lg-left {
-      @media (min-width: $breakpoint-mobile-horizontal) {
+      @media (min-width: $breakpoint-mobile) {
         @include grid(2, $gutter-horizontal: 16px);
 
         > *:first-child {
@@ -173,7 +173,7 @@
     }
 
     &-row-2-lg-right {
-      @media (min-width: $breakpoint-mobile-horizontal) {
+      @media (min-width: $breakpoint-mobile) {
         @include grid(2, $gutter-horizontal: 16px);
 
         > *:first-child {
@@ -199,7 +199,7 @@
     }
 
     &-flex {
-      @media (min-width: $breakpoint-mobile-horizontal) {
+      @media (min-width: $breakpoint-mobile) {
         align-items: flex-start;
         display: flex;
       }
@@ -217,7 +217,7 @@
     &-flex-col {
       margin: 0 0 1rem;
 
-      @media (min-width: $breakpoint-mobile-horizontal) {
+      @media (min-width: $breakpoint-mobile) {
         flex-grow: 1;
         margin: 0 16px 0 0;
 
@@ -252,7 +252,7 @@
         width: 20px;
       }
 
-      @media (max-width: $breakpoint-mobile-horizontal - 1) {
+      @media (max-width: $breakpoint-mobile - 1) {
         text-align: center;
 
         .button {

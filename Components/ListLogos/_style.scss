@@ -74,7 +74,7 @@
       padding: 16px;
     }
 
-    @media (min-width: $breakpoint-mobile-horizontal) {
+    @media (min-width: $breakpoint-mobile) {
       padding: 24px;
     }
 
@@ -85,7 +85,7 @@
         padding: 20px;
       }
 
-      @media (min-width: $breakpoint-mobile-horizontal) {
+      @media (min-width: $breakpoint-mobile) {
         padding: 28px;
       }
 

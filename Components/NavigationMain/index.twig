@@ -4,13 +4,12 @@
       <a class="logo" href="{{ site.link }}">
         <img class="logo-image" src="{{ logo.src }}" alt="{{ logo.alt }}">
       </a>
-      <div class="right">
       {% if menu %}
         <ul class="menu">
         {% for item in menu.items %}
           {# regular menu item #}
           {% if not item.children %}
-            <li class="menu-item {{ item.current ? 'menu-item--current' }}">
+            <li class="menu-item small {{ item.current ? 'menu-item--current' }}">
               <a class="menu-link" href="{{ item.link }}" {{ item.target == '_blank' ? 'target="_blank" rel="noreferrer noopener"' }}>
                 {{ item.title }}
               </a>
@@ -18,13 +17,13 @@
           {% endif %}
           {# menu with submenu item #}
           {% if item.children %}
-            <li class="menu-item {{ item.current ? 'menu-item--current' }}">
-              <div class="menu-link open-submenu" data-slug="{{item.slug}}" id="sub-{{item.slug}}" href="{{ item.link }}" {{ item.target == '_blank' ? 'target="_blank" rel="noreferrer noopener"' }}>
+            <li class="menu-item small open-submenu {{ item.current ? 'menu-item--current' }}">
+              <div class="menu-link" data-slug="{{item.slug}}" id="sub-{{item.slug}}" href="{{ item.link }}" {{ item.target == '_blank' ? 'target="_blank" rel="noreferrer noopener"' }}>
                 {{ item.title }}
               </div>
               <ul class="menu menu-submenu">
                 {% for subitem in item.children %}
-                  <li class="menu-item {{ subitem.current ? 'menu-item--current' }}">
+                  <li class="menu-item small {{ subitem.current ? 'menu-item--current' }}">
                     <a class="menu-link" href="{{ subitem.link }}">{{ subitem.title }}</a>
                   </li>
                 {% endfor %}
@@ -39,8 +38,14 @@
           {% endfor %} #}
         </ul>
       {% endif %}
-      {% include 'Partials/_search.twig' %}
+      {% if ctaLink.url %}
+      <div class="cta">
+        <a class="button button--red" href="{{ ctaLink.url }}"{% if ctaLink.target %} target="{{ ctaLink.target }}" rel="noreferrer noopener"{% endif %}>
+          {{ ctaLink.title|e }}
+        </a>
       </div>
+      {% endif %}
+      {# {% include 'Partials/_search.twig' %} #}
     </div>
   </div>
 </nav>

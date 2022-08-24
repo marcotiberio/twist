@@ -1,0 +1,24 @@
+<div class="flyntComponent" is="flynt-block-contact">
+  <div class="container">
+    <div class="content">
+        <div class="inner">
+          <div class="address">
+            <div class="sectionTitle">Address</div>
+            {{ addresstHtml|e('wp_kses_post') }}
+            </div>
+          <ul class="opening-hours">
+            <div class="sectionTitle">Opening Hours</div>
+            {% for panel in openingHours %}
+              <li class="item">
+                <span class="paragraph">{{ panel.panelDay }}</span>
+                <span class="paragraph">{{ panel.panelTime }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      <div class="acf-map" data-zoom="14" data-key="{{apiKey}}">
+        <div class="marker" data-lat="{{ maps.lat }}" data-lng="{{ maps.lng }}"></div>
+      </div>
+    </div>
+  </div>
+</div>

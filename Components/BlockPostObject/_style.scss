@@ -6,7 +6,7 @@
   }
 
   .box {
-    @media (min-width: $breakpoint-tablet-horizontal) {
+    @media (min-width: $breakpoint-tablet) {
       align-items: center;
       display: flex;
     }
@@ -21,7 +21,7 @@
           z-index: 20;
         }
 
-        @media (min-width: $breakpoint-tablet-horizontal) {
+        @media (min-width: $breakpoint-tablet) {
           align-items: center;
           display: flex;
           height: 380px;
@@ -49,7 +49,7 @@
           z-index: 30;
         }
 
-        @media (min-width: $breakpoint-tablet-horizontal) {
+        @media (min-width: $breakpoint-tablet) {
           bottom: auto;
           margin-left: 0;
           max-width: 60%;
@@ -58,12 +58,12 @@
     }
 
     &--imageLeft {
-      @media (min-width: $breakpoint-tablet-horizontal) {
+      @media (min-width: $breakpoint-tablet) {
         flex-direction: row-reverse;
       }
 
       .box-inner--content {
-        @media (min-width: $breakpoint-tablet-horizontal) {
+        @media (min-width: $breakpoint-tablet) {
           margin-left: $spacing-small;
           margin-right: 0;
           padding-left: 0;
@@ -71,7 +71,7 @@
         }
         
         &::after {
-          @media (min-width: $breakpoint-tablet-horizontal) {
+          @media (min-width: $breakpoint-tablet) {
             left: auto;
             right: 100%;
           }
@@ -79,7 +79,7 @@
       }
 
       .box-inner--image {
-        @media (min-width: $breakpoint-tablet-horizontal) {
+        @media (min-width: $breakpoint-tablet) {
           margin-left: 10%;
           margin-right: 0;
         }
@@ -98,14 +98,14 @@
         padding: $spacing-small;
       }
 
-      @media (min-width: $breakpoint-tablet-horizontal) {
+      @media (min-width: $breakpoint-tablet) {
         max-width: 440px;
         padding: 0;
       }
     }
 
     .figure-image {
-      @media (min-width: $breakpoint-tablet-horizontal) {
+      @media (min-width: $breakpoint-tablet) {
         height: 330px;
         object-fit: cover;
         width: calc(330px * 1.5);

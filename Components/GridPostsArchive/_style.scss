@@ -8,7 +8,7 @@
       @include grid(2);
     }
 
-    @media (min-width: $breakpoint-tablet-horizontal) {
+    @media (min-width: $breakpoint-tablet) {
       @include grid(3);
     }
   }

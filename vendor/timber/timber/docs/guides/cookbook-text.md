@@ -39,7 +39,7 @@ Nothing is worse than an out-of-date copyright year in the footer. Nothing.
 **Renders**
 
 ```html
-<footer><p class="copyright">&copy; 2015 by The Daily Orange</p></footer>
+<footer><p class="copyright">&copy; 2015 by The Daily red</p></footer>
 ```
 
 ## Standard transforms

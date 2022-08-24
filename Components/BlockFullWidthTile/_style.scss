@@ -1,0 +1,55 @@
+[is='flynt-block-full-width-tile'] {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+  padding-top: $spacing-large*2 !important;
+
+  @media (max-width: $breakpoint-mobile) {
+    height: auto;
+    padding: $spacing-large $spacing-small !important;
+  }
+  
+  .container {
+    align-items: center;
+    display: flex;
+    height: 100%;
+
+    .box {
+      align-items: center;
+      display: flex;
+
+      &-inner {
+        border-radius: 30px;
+        padding: $spacing-large;
+        width: 40%;
+
+        @media (max-width: $breakpoint-tablet) {
+          width: 50%;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+          width: 100%;
+        }
+      }
+
+      &--left {
+        justify-content: flex-start;
+
+        .box-inner {
+          background-color: rgba(255, 0, 0, 0.8);
+          color: $white;
+        }
+      }
+
+      &--right {
+        justify-content: flex-end;
+
+        .box-inner {
+          background-color: rgba(255, 255, 255, 0.8);
+          color: $red;
+        }
+      }
+    }
+  }
+}

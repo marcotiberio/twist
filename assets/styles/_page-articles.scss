@@ -50,7 +50,7 @@
             grid-template-columns: repeat(2, 1fr);
             width: 100%;
 
-            @media (max-width: $breakpoint-mobile-horizontal) {
+            @media (max-width: $breakpoint-mobile) {
               display: grid;
               grid-auto-rows: auto;
               grid-template-columns: 1fr;

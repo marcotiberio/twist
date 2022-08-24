@@ -25,11 +25,11 @@
       text-transform: uppercase;
       width: calc(25% - 15px);
 
-      @media (max-width: $breakpoint-tablet-horizontal) {
+      @media (max-width: $breakpoint-tablet) {
         width: calc(50% - 15px);
       }
 
-      @media (max-width: $breakpoint-mobile-horizontal) {
+      @media (max-width: $breakpoint-mobile) {
         width: 100%;
       }
 
@@ -105,7 +105,7 @@
     padding-bottom: $spacing-large;
     width: 100%;
 
-    @media (max-width: $breakpoint-tablet-horizontal) {
+    @media (max-width: $breakpoint-tablet) {
       display: flex;
       flex-flow: row nowrap;
       overflow: scroll;
@@ -121,7 +121,7 @@
       text-decoration: none;
       width: 100px;
 
-      @media (max-width: $breakpoint-tablet-horizontal) {
+      @media (max-width: $breakpoint-tablet) {
         margin-bottom: $spacing-small;
       }
 

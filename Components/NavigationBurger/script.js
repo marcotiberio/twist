@@ -45,7 +45,11 @@ class NavigationBurger extends window.HTMLElement {
   }
 
   toggleSubmenu (e) {
-    this.$submenu.slideToggle()
+    const target = $(e.currentTarget)
+    console.log(target)
+    target.siblings('.menu-submenu').slideToggle()
+    // target.parent().siblings().children('.menu-submenu').slideToggle()
+    // this.$submenu.slideToggle()
   }
 }
 

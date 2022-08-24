@@ -1,4 +1,4 @@
-const host = 'http://techstyler.local/'
+const host = 'http://twist.local/'
 const dest = './dist'
 
 function getCopyConfig (source) {

@@ -4,7 +4,7 @@
     display: flex;
     flex-flow: row wrap;
 
-    @media (max-width: $breakpoint-mobile-horizontal) {
+    @media (max-width: $breakpoint-mobile) {
       flex-flow: row wrap;
     }
   }

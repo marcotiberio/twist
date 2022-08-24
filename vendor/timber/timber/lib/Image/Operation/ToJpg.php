@@ -69,7 +69,7 @@ class ToJpg extends ImageOperation {
 		list($width, $height) = getimagesize($load_filename);
 		$output = imagecreatetruecolor($width, $height);
 		$c = self::hexrgb($this->color);
-		$color = imagecolorallocate($output, $c['red'], $c['green'], $c['blue']);
+		$color = imagecolorallocate($output, $c['red'], $c['red'], $c['blue']);
 		imagefilledrectangle($output, 0, 0, $width, $height, $color);
 		imagecopy($output, $input, 0, 0, 0, 0, $width, $height);
 		imagejpeg($output, $save_filename);

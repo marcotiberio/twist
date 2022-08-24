@@ -22,10 +22,11 @@
   "Components/NavigationFooterColumns/Assets/youtube.svg": "Components/NavigationFooterColumns/Assets/youtube-3b8f2b7f41.svg",
   "Components/NavigationMain/Assets/logo.svg": "Components/NavigationMain/Assets/logo-4627cdfa7d.svg",
   "Components/SliderImagesLanding/Assets/logo.svg": "Components/SliderImagesLanding/Assets/logo-4627cdfa7d.svg",
-  "assets/admin.css": "assets/admin-b6803675bd.css",
+  "assets/admin.css": "assets/admin-a87991c6aa.css",
   "assets/admin.js": "assets/admin-c3ad51a03b.js",
   "assets/admin.js.LICENSE.txt": "assets/admin-23200fb757.js.LICENSE.txt",
   "assets/fonts/Cy.woff2": "assets/fonts/Cy-b7f83d92c9.woff2",
+  "assets/fonts/CyBold.woff2": "assets/fonts/CyBold-8d10e55060.woff2",
   "assets/fonts/CyExtraBold.woff2": "assets/fonts/CyExtraBold-c515326273.woff2",
   "assets/fonts/SofiaProMedium.woff2": "assets/fonts/SofiaProMedium-62217c5879.woff2",
   "assets/fonts/SofiaProRegular.woff2": "assets/fonts/SofiaProRegular-be7cd03d92.woff2",
@@ -34,7 +35,7 @@
   "assets/fonts/SofiaProSemiBoldItalic.woff2": "assets/fonts/SofiaProSemiBoldItalic-be4ca8aba5.woff2",
   "assets/icons/check-circle.svg": "assets/icons/check-circle-98401bcdb9.svg",
   "assets/icons/spinner.svg": "assets/icons/spinner-2e5c842fc5.svg",
-  "assets/main.css": "assets/main-2082784e4d.css",
-  "assets/main.js": "assets/main-f5c7ba74b7.js",
-  "assets/main.js.LICENSE.txt": "assets/main-957f80e714.js.LICENSE.txt"
+  "assets/main.css": "assets/main-a1b1c672b8.css",
+  "assets/main.js": "assets/main-637b1774a1.js",
+  "assets/main.js.LICENSE.txt": "assets/main-4591b3027e.js.LICENSE.txt"
 }

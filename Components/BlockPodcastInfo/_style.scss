@@ -8,7 +8,7 @@
     padding-top: $spacing-small;
     width: 100%;
 
-    @media (max-width: $breakpoint-mobile-horizontal) {
+    @media (max-width: $breakpoint-mobile) {
       display: grid;
       grid-auto-rows: auto;
       grid-template-columns: 1fr;
@@ -21,7 +21,7 @@
       position: relative;
       width: 100%;
 
-      @media (max-width: $breakpoint-mobile-horizontal) {
+      @media (max-width: $breakpoint-mobile) {
         grid-column-end: 2;
         grid-column-start: 1;
       }
@@ -57,7 +57,7 @@
         width: 25px;
         z-index: 10;
 
-        @media (min-width: $breakpoint-tablet-horizontal) {
+        @media (min-width: $breakpoint-tablet) {
           &:hover,
           &:focus {
             background-color: transparent;
@@ -113,7 +113,7 @@
       grid-column-end: 3;
       grid-column-start: 2;
 
-      @media (max-width: $breakpoint-tablet-horizontal) {
+      @media (max-width: $breakpoint-tablet) {
         grid-column-end: 2;
         grid-column-start: 1;
       }
@@ -147,7 +147,7 @@
       grid-column-end: 3;
       grid-column-start: 5;
 
-      @media (max-width: $breakpoint-tablet-horizontal) {
+      @media (max-width: $breakpoint-tablet) {
         grid-column-end: 2;
         grid-column-start: 1;
       }

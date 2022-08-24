@@ -8,7 +8,7 @@
   display: grid;
   grid-template-columns: 3fr 1fr;
 
-  @media (max-width: $breakpoint-mobile-horizontal) {
+  @media (max-width: $breakpoint-mobile) {
     column-gap: $spacing-small;
   }
 }
@@ -65,7 +65,7 @@
 .form--newsletter {
   margin-top: $spacing-large*2;
 
-  @media (max-width: $breakpoint-mobile-horizontal) {
+  @media (max-width: $breakpoint-mobile) {
     margin-top: $spacing-large;
   }
 
@@ -100,21 +100,21 @@
 
 .wpcf7-form {
   &.invalid .wpcf7-response-output {
-    border-color: $orange !important;
+    border-color: $red !important;
     margin: $spacing-large 0;
     padding: 5px;
     text-align: center;
   }
 
   &.unaccepted .wpcf7-response-output {
-    border-color: $orange !important;
+    border-color: $red !important;
     margin: $spacing-large 0;
     padding: 5px;
     text-align: center;
   }
 
   .wpcf7-response-output {
-    border-color: $lime !important;
+    border-color: $red !important;
     margin: $spacing-large 0;
     padding: 5px;
     text-align: center;
@@ -122,7 +122,7 @@
 }
 
 .wpcf7-not-valid-tip {
-  color: $orange;
+  color: $red;
   display: block;
   font-size: 1rem;
   font-weight: normal;

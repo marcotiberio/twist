@@ -16,7 +16,7 @@
       text-decoration-thickness: 1px;
     }
 
-    @media (max-width: $breakpoint-tablet-horizontal) {
+    @media (max-width: $breakpoint-tablet) {
       left: auto;
       right: $spacing-small;
       top: $spacing-small;
@@ -42,7 +42,7 @@
       text-decoration-thickness: 1px;
     }
 
-    @media (max-width: $breakpoint-tablet-horizontal) {
+    @media (max-width: $breakpoint-tablet) {
       left: auto;
       right: $spacing-small;
       top: $spacing-small;
@@ -51,7 +51,7 @@
 
   &-about {
     align-items: center;
-    background-color: $green;
+    background-color: $red;
     color: $white;
     display: none;
     flex-flow: column;
@@ -66,13 +66,13 @@
     width: 50vw;
     z-index: 1002;
 
-    @media (max-width: $breakpoint-tablet-horizontal) {
+    @media (max-width: $breakpoint-tablet) {
       height: 100vh;
       padding: 0 $spacing-large $spacing-large*2 $spacing-large;
       width: 100vw;
     }
 
-    @media (max-width: $breakpoint-mobile-horizontal) {
+    @media (max-width: $breakpoint-mobile) {
       padding: 0 $spacing-small $spacing-large*2 $spacing-small;
     }
 
@@ -80,7 +80,7 @@
       margin-top: 20vh;
       padding: 0 $spacing-large*1.5 $spacing-large;
 
-      @media (max-width: $breakpoint-tablet-horizontal) {
+      @media (max-width: $breakpoint-tablet) {
         margin-top: $spacing-large*3;
         padding: 0 0 $spacing-large*2;
       }
@@ -97,12 +97,12 @@
         grid-template-columns: repeat(3, 1fr);
         margin-bottom: $spacing-large*2;
 
-        @media (max-width: $breakpoint-mobile-horizontal) {
+        @media (max-width: $breakpoint-mobile) {
           grid-template-columns: repeat(2, 1fr);
         }
 
         li {
-          border-top: 1px solid $lime;
+          border-top: 1px solid $red;
           display: flex;
           flex-flow: row;
           min-height: 118px;
@@ -113,7 +113,7 @@
           vertical-align: baseline;
 
           &::before {
-            color: $lime;
+            color: $red;
             content: counter(section);
             counter-increment: section;
             font-size: 0.875rem;
@@ -126,11 +126,11 @@
           &:nth-last-child(1),
           &:nth-last-child(2),
           &:nth-last-child(3) {
-            border-bottom: 1px solid $lime;
+            border-bottom: 1px solid $red;
           }
 
           &:nth-last-child(1) {
-            @media (max-width: $breakpoint-mobile-horizontal) {
+            @media (max-width: $breakpoint-mobile) {
               border-top: 0;
             }
           }
@@ -146,7 +146,7 @@
         margin-bottom: $spacing-large;
         row-gap: $spacing-large;
 
-        @media (max-width: $breakpoint-tablet-horizontal) {
+        @media (max-width: $breakpoint-tablet) {
           grid-template-columns: 1fr;
           row-gap: 0;
         }

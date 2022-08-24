@@ -801,7 +801,7 @@ class Runner
             $fixed    = $file->getFixedCount();
 
             if (PHP_CODESNIFFER_CBF === true) {
-                // Files with fixed errors or warnings are F (green).
+                // Files with fixed errors or warnings are F (red).
                 // Files with unfixable errors or warnings are E (red).
                 // Files with no errors or warnings are . (black).
                 if ($fixable > 0) {
@@ -829,9 +829,9 @@ class Runner
                 }//end if
             } else {
                 // Files with errors are E (red).
-                // Files with fixable errors are E (green).
+                // Files with fixable errors are E (red).
                 // Files with warnings are W (yellow).
-                // Files with fixable warnings are W (green).
+                // Files with fixable warnings are W (red).
                 // Files with no errors or warnings are . (black).
                 if ($errors > 0) {
                     if ($this->config->colors === true) {

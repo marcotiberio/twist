@@ -8,7 +8,7 @@
     display: none;
   }
 
-  @media (max-width: $breakpoint-tablet-horizontal) {
+  @media (max-width: $breakpoint-tablet) {
     padding-bottom: $spacing-small / 2;
     padding-top: $spacing-small / 2;
   }
@@ -19,7 +19,7 @@
     justify-content: space-between;
     width: 100%;
 
-    @media (max-width: $breakpoint-tablet-horizontal) {
+    @media (max-width: $breakpoint-tablet) {
       display: flex;
       flex-flow: row nowrap;
       overflow: scroll;
@@ -32,7 +32,7 @@
       padding: 0;
       text-align: center;
 
-      @media (max-width: $breakpoint-mobile-horizontal) {
+      @media (max-width: $breakpoint-mobile) {
         padding: 0 ($spacing-small + 1px);
       }
       

@@ -1,6 +1,6 @@
 # acf-field-group-composer
 
-[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightred.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 [![Build Status](https://img.shields.io/travis/flyntwp/acf-field-group-composer.svg?style=flat-square)](https://travis-ci.org/flyntwp/acf-field-group-composer)
 [![Code Quality](https://img.shields.io/scrutinizer/g/flyntwp/acf-field-group-composer.svg?style=flat-square)](https://scrutinizer-ci.com/g/flyntwp/acf-field-group-composer)
 [![Code Coverage](https://img.shields.io/coveralls/flyntwp/acf-field-group-composer.svg?style=flat-square)](https://coveralls.io/github/flyntwp/acf-field-group-composer)

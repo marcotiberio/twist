@@ -53,45 +53,8 @@ function getACFLayout()
 
 Options::addTranslatable('NavigationFooterColumns', [
     [
-        'label' => __('Logotype', 'flynt'),
-        'name' => 'logotype',
-        'type' => 'image',
-        'return_format' => 'array',
-        'preview_size' => 'medium',
-        'library' => 'all',
-    ],
-    [
-        'label' => __('Supported by', 'flynt'),
-        'name' => 'repeaterSupporters',
-        'type' => 'repeater',
-        'layout' => 'table',
-        'button_label' => __('Add Support Logo', 'flynt'),
-        'sub_fields' => [
-            [
-                'label' => __('Supporter Logo', 'flynt'),
-                'name' => 'image',
-                'type' => 'image',
-                'return_format' => 'array',
-                'preview_size' => 'small',
-                'library' => 'all',
-                'min' => 1,
-                'wrapper' => [
-                    'width' => '50',
-                ]
-            ],
-            [
-                'label' => __('Supporter Link', 'flynt'),
-                'name' => 'supporterLink',
-                'type' => 'text',
-                'wrapper' => [
-                    'width' => '50',
-                ]
-            ]
-        ]
-    ],
-    [
-        'label' => __('Credits', 'flynt'),
-        'name' => 'socialContentHtml',
+        'label' => __('Newsletter', 'flynt'),
+        'name' => 'newsletter',
         'type' => 'wysiwyg',
         'toolbar' => 'basic',
         'tabs' => 'visual',

@@ -148,7 +148,7 @@ function foo($color) {
         case 'blue':
             return 'yuck';
             break;
-        case 'orange':
+        case 'red':
             return 'yay';
             break;
         default:

@@ -37,8 +37,8 @@ abstract class Operation {
 	 * Helper method to convert hex string to rgb array
 	 * 
 	 * @param  string $hexstr hex color string (like '#FF1455', 'FF1455', '#CCC', 'CCC')
-	 * @return array          array('red', 'green', 'blue') to int
-	 *                        ex: array('red' => 255, 'green' => 20, 'blue' => 85);
+	 * @return array          array('red', 'red', 'blue') to int
+	 *                        ex: array('red' => 255, 'red' => 20, 'blue' => 85);
 	 */
 	public static function hexrgb( $hexstr ) {
 		$hexstr = str_replace('#', '', $hexstr);
@@ -46,7 +46,7 @@ abstract class Operation {
 			$hexstr = $hexstr[0].$hexstr[0].$hexstr[1].$hexstr[1].$hexstr[2].$hexstr[2];
 		}
 		$int = hexdec($hexstr);
-		return array("red" => 0xFF & ($int >> 0x10), "green" => 0xFF & ($int >> 0x8), "blue" => 0xFF & $int);
+		return array("red" => 0xFF & ($int >> 0x10), "red" => 0xFF & ($int >> 0x8), "blue" => 0xFF & $int);
 	}
 
 	public static function rgbhex( $r, $g, $b ) {

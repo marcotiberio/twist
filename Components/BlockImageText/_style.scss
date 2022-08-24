@@ -6,15 +6,20 @@
     height: 100%;
   }
 
-  @media (min-width: $breakpoint-tablet-horizontal) {
+  @media (min-width: $breakpoint-mobile + 1) {
     .box {
-      align-items: flex-start;
+      align-items: center;
       display: flex;
+      flex-flow: row wrap;
       margin: 0;
 
       &-inner {
         @include reset-content-margins('both');
         width: 50%;
+
+        &--content {
+          margin-bottom: $spacing-large;
+        }
       }
 
       &--image {
@@ -22,41 +27,62 @@
           flex-direction: row;
 
           .box-inner--content {
-            padding-right: $spacing-small/2;
+            padding-right: $spacing-large;
           }
 
           .box-inner--image {
-            padding-left: $spacing-small/2;
+            padding-left: $spacing-small;
           }
         }
-  
+
         &Left {
           flex-direction: row-reverse;
 
           .box-inner--content {
-            padding-left: $spacing-small/2;
+            padding-left: $spacing-large;
           }
 
           .box-inner--image {
-            padding-right: $spacing-small/2;
+            padding-right: $spacing-small;
           }
         }
       }
     }
+  }
 
-    .figure-caption {
-      position: absolute;
+  @media (max-width: $breakpoint-mobile) {
+    .box {
+      align-items: flex-end;
+      display: flex;
+      flex-flow: column-reverse wrap;
+      margin: 0;
     }
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    .box {
+      align-items: flex-start;
+    }
+  }
+
+  .figure-caption {
+    position: absolute;
   }
 
   figure {
     margin: 0;
 
+    @media (max-width: $breakpoint-mobile) {
+      padding-bottom: $spacing-small;
+    }
+
     img {
-      height: 70vh;
+      aspect-ratio: 1/1;
+      border-radius: 30px;
+      height: 50vh;
       object-fit: cover;
   
-      @media (max-width: $breakpoint-tablet-horizontal) {
+      @media (max-width: $breakpoint-tablet) {
         height: auto;
       }
     }

@@ -1,19 +1,19 @@
 [is='flynt-block-subscription-confirmation'] {
   .container {
     align-items: center;
-    background-color: $green;
+    background-color: $red;
     display: flex;
     height: calc(100vh - 34px);
     justify-content: center;
 
     .left {
-      background-color: $green;
+      background-color: $red;
       height: 100vh;
       position: relative;
       transform: translateX(55%);
       z-index: 1;
 
-      @media (max-width: $breakpoint-tablet-horizontal) {
+      @media (max-width: $breakpoint-tablet) {
         display: none;
       }
 
@@ -23,13 +23,13 @@
     }
 
     .right {
-      background-color: $green;
+      background-color: $red;
       height: 100vh;
       position: relative;
       transform: translateX(-55%);
       z-index: 1;
 
-      @media (max-width: $breakpoint-tablet-horizontal) {
+      @media (max-width: $breakpoint-tablet) {
         display: none;
       }
 

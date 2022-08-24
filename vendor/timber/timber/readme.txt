@@ -684,12 +684,12 @@ Misc fixes to documentation
 
 = 0.19.1 =
 * Removed .git folder hiding in php-router
-* Added support for WooCommerce and other plugins in starter theme (thanks @jamesagreenleaf)
+* Added support for WooCommerce and other plugins in starter theme (thanks @jamesaredleaf)
 * Starter theme now based on OO-style TimberSite convention
-* You can not get the modified_author (thanks @jamesagreenleaf)
-* ...oh and the modified date (thanks @jamesagreenleaf)
+* You can not get the modified_author (thanks @jamesaredleaf)
+* ...oh and the modified date (thanks @jamesaredleaf)
 * Code clean-up like mad (thanks @hsz)
-* Fixed bug when calling Timber::get_posts in loop (thanks @jamesagreenleaf)
+* Fixed bug when calling Timber::get_posts in loop (thanks @jamesaredleaf)
 
 = 0.19.0 =
 * Reorganized dependencies into /vendor directories based on composer (thanks @mgmartel, @rarst, @bryanaka)
@@ -697,8 +697,8 @@ Misc fixes to documentation
 * Fixed issues with sidebar output
 
 = 0.18.1 =
-* Dates now use date_i18n filter (thanks @jamesagreenleaf)
-* The twig |date filter now defaults to your WP Admin settings (thanks @jamesagreenleaf)
+* Dates now use date_i18n filter (thanks @jamesaredleaf)
+* The twig |date filter now defaults to your WP Admin settings (thanks @jamesaredleaf)
 * You can send Timber::$dirname an array to specify multiple locations of twig files within a theme
 * Load views from anywhere on the server (thanks @th3fallen)
 * Load twig files from anywhere on the server using an absolute path
